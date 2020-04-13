@@ -1,0 +1,332 @@
+$wt: #fff;
+$dblue: #2c3e50;
+$grey: #f8f9fa;
+$lblue: #1abc9c;
+$text: #2c3e50;
+$ftc: #1a252f;
+$bdc: #e9ecef;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.line {
+  width: 100px;
+  border: 2px solid $wt;
+}
+
+nav {
+  width: 100%;
+  position: fixed;
+  background: $dblue;
+  padding: 28px 0;
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo {
+      cursor: pointer;
+      h2 {
+        color: $wt;
+      }
+    }
+    .menu {
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $wt;
+        font-weight: 500;
+        margin-left: 22px;
+        transition: color 800ms;
+        &:hover {
+          color: $lblue;
+        }
+      }
+    }
+  }
+}
+
+.main {
+  width: 100%;
+  min-height: 80vh;
+  background: $lblue;
+  display: flex;
+  .container {
+    margin: auto;
+    max-width: 450px;
+    text-align: center;
+    color: $wt;
+    img {
+      width: 250px;
+    }
+    h1 {
+      font-size: 44px;
+      line-height: 1;
+      margin: 18px 0;
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      i {
+        margin: 0 14px;
+      }
+    }
+    h3 {
+      font-size: 23px;
+      font-weight: 400;
+      margin: 30px 0 0 0;
+    }
+  }
+}
+
+.portfolio {
+  padding: 80px 0;
+  .container {
+    color: $dblue;
+    .title {
+      text-align: center;
+      h1 {
+        font-size: 44px;
+        line-height: 1;
+        margin: 18px 0;
+      }
+      .rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .line {
+          border: 2px solid $dblue;
+        }
+        i {
+          margin: 0 14px;
+        }
+      }
+    }
+    .cardWrap {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px 0 0 0;
+      .card {
+        width: 100%;
+        max-width: 31%;
+        margin: 15px 0;
+        height: 300px;
+        background: url("./img/cabin.png") no-repeat center/cover;
+        &:nth-child(2) {
+          background: url("./img/cake.png") no-repeat center/cover;
+        }
+        &:nth-child(3) {
+          background: url("./img/circus.png") no-repeat center/cover;
+        }
+        &:nth-child(4) {
+          background: url("./img/game.png") no-repeat center/cover;
+        }
+        &:nth-child(5) {
+          background: url("./img/safe.png") no-repeat center/cover;
+        }
+        &:nth-child(6) {
+          background: url("./img/submarine.png") no-repeat center/cover;
+        }
+      }
+    }
+  }
+}
+
+.about {
+  width: 100%;
+  padding: 100px 0;
+  background: $lblue;
+  color: $wt;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+      text-align: center;
+      h1 {
+        font-size: 44px;
+        line-height: 1;
+        margin: 18px 0;
+      }
+      .rating {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        i {
+          margin: 0 14px;
+        }
+      }
+    }
+    .info {
+      width: 100%;
+      max-width: 600px;
+      display: flex;
+      justify-content: space-between;
+      padding: 34px 0;
+      .left,
+      .right {
+        width: 100%;
+        max-width: 46%;
+        p {
+          line-height: 1.5;
+          font-size: 17px;
+        }
+      }
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      border: 2px solid $wt;
+      color: $wt;
+      padding: 16px 30px;
+      border-radius: 8px;
+      transition: background 600ms, border 600ms, color 600ms;
+      &:hover {
+        background: $grey;
+        color: $dblue;
+        border: 2px solid $grey;
+      }
+      i {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.contact {
+  padding: 100px 0;
+  color: $dblue;
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .title {
+      text-align: center;
+      h1 {
+        font-size: 44px;
+        line-height: 1;
+        margin: 18px 0;
+      }
+      .rating {
+        display: flex;
+        align-items: center;
+        .line {
+          border: 2px solid $dblue;
+        }
+        i {
+          margin: 0 14px;
+        }
+      }
+    }
+    .contactWrap {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+      max-width: 680px;
+      padding: 34px 0 0 0;
+      input,
+      textarea {
+        width: 100%;
+        border: none;
+        outline: none;
+        border-bottom: 1px solid $bdc;
+        color: $dblue;
+        padding: 14px 0;
+        margin-bottom: 20px;
+        &::placeholder {
+          color: $dblue;
+          font-size: 24px;
+        }
+      }
+      .btn {
+        display: inline-block;
+        text-decoration: none;
+        background: $lblue;
+        padding: 13px 0;
+        width: 140px;
+        text-align: center;
+        border-radius: 4px;
+        color: $wt;
+        transition: background 600ms;
+        &:hover {
+          background: darken($color: $lblue, $amount: 10%);
+        }
+      }
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  background: $dblue;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 0;
+    .card {
+      width: 100%;
+      max-width: 30%;
+      color: $wt;
+      text-align: center;
+      p {
+        line-height: 1.7;
+        a {
+          text-decoration: none;
+          color: $lblue;
+          font-weight: 500;
+        }
+      }
+      h2 {
+        margin-bottom: 18px;
+      }
+      .iconsWrap {
+        display: flex;
+        justify-content: center;
+        .circle {
+          width: 40px;
+          height: 40px;
+          border: 2px solid $wt;
+          border-radius: 50px;
+          margin: 0 8px;
+          display: flex;
+          background: $dblue;
+          cursor: pointer;
+          transition: background 500ms, color 500ms;
+          &:hover {
+            background: $wt;
+            color: $dblue;
+          }
+          i {
+            margin: auto;
+          }
+        }
+      }
+    }
+  }
+  .copyright {
+    width: 100%;
+    text-align: center;
+    padding: 24px 0;
+    background: $ftc;
+    p {
+      color: $wt;
+      font-size: 14px;
+    }
+  }
+}
